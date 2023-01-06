@@ -8,7 +8,7 @@ module.exports = async function(Client, Interaction) {
         for(let option of Interaction.options.data) {
             if(option.type === ApplicationCommandOptionType.Subcommand) {
                 if(option.name) Applications.push(option.name)
-                options.options?.forEach((x) => {
+                option.options?.forEach((x) => {
                     if(x.value) Applications.push(x.value)
                 })
             } else if(option.value) Applications.push(option.value)
